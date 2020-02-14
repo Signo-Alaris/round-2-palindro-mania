@@ -1,3 +1,4 @@
+# THE WINNER OF ROUND 2 IS TREVOR!
 # Coding Challenge 2 - Palindro-Mania
 Challenge: Create a function "isPalindrome()" that returns true if the provided string is a palindrome. False otherwise. This function must be recursive. If the length of the string is 0 or 1, the function should return true.
 ## Gearoid
@@ -48,14 +49,14 @@ Sample Output: ![](./images/gearoid.png)
 #if RECURSIVE
 int isPallindrome(const char* _str, unsigned int _length, unsigned int _pos)
 {
-	if (_pos >= _length / 2) // If current iteration is at halfway point
-		return 1;
+    if (_pos >= _length / 2) // If current iteration is at halfway point
+        return 1;
 
-	if (_str[_pos] == _str[_length - _pos - 1]) // If pallindrome so far, keep going
-		return isPallindrome(_str, _length,_pos + 1);
+    if (_str[_pos] == _str[_length - _pos - 1]) // If pallindrome so far, keep going
+        return isPallindrome(_str, _length,_pos + 1);
 
-	else // No longer pallindrome, return false
-		return 0;
+    else // No longer pallindrome, return false
+        return 0;
 }
 #endif // RECURSIVE
 ```
@@ -191,22 +192,22 @@ Sample Output: ![](./images/trevor.png)
 ## Matt
 ```
 void CheckIfPalindrome(std::string word_to_test, int index, bool & isPalindrome) {
-	if (index < word_to_test.length()) {
-		if (word_to_test[index] == word_to_test[word_to_test.length() - (index + 1)]) {
+    if (index < word_to_test.length()) {
+        if (word_to_test[index] == word_to_test[word_to_test.length() - (index + 1)]) {
 
-			CheckIfPalindrome(word_to_test, index + 1, isPalindrome);
-			isPalindrome = true;
-		}
-		else isPalindrome = false;
-	}
-	//tbh i dont think the following block ever gets executed but oh well
-	else if (index > word_to_test.length() - (index + 1)) {
-		//we got to the middle of the word on both sides,
-		//And, well done team, it was all the same.
-		std::cout << "ah yeah";
-			isPalindrome = true;
-	}
-	
+            CheckIfPalindrome(word_to_test, index + 1, isPalindrome);
+            isPalindrome = true;
+        }
+        else isPalindrome = false;
+    }
+    //tbh i dont think the following block ever gets executed but oh well
+    else if (index > word_to_test.length() - (index + 1)) {
+        //we got to the middle of the word on both sides,
+        //And, well done team, it was all the same.
+        std::cout << "ah yeah";
+            isPalindrome = true;
+    }
+    
 }
 ```
 
